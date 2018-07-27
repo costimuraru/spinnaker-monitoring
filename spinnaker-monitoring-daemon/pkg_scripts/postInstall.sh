@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 pip install -r /opt/spinnaker-monitoring/requirements.txt
 
 LOG_DIR="/var/log/spinnaker/monitoring"

@@ -18,8 +18,10 @@ apply plugin: 'nebula.ospackage'
 
 ospackage() {
   packageName = project.name
-  version = toVers(project.version.toString())
-  release = 3
+  version = "0.8.1" //toVers(project.version.toString())
+  release "master"
+  os "LINUX"
+  archStr "noarch"
 
   postInstall = file('pkg_scripts/postInstall.sh')
 

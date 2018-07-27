@@ -23,9 +23,10 @@ ospackage() {
   // common installation paths 
   def spinnakerMonitoringHome = "/opt/spinnaker-monitoring"
   
-  // global package requirements
-  version = toVers(project.version.toString())
-  release = '3'
+  version = "0.8.1" //toVers(project.version.toString())
+  release "master"
+  os "LINUX"
+  archStr "noarch"
   
   requires('python-pip')
 
@@ -56,7 +57,7 @@ ospackage() {
   }  
   
   from('registry.dev') {
-    into('/opt/spinnaker-monitoring/registry.example')
+    into('/opt/spinnaker-monitoring/registry')
     fileMode  0600
   }  
   

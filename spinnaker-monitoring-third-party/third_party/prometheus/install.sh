@@ -552,8 +552,8 @@ fi
 if $CLIENT; then
   # 20170226
   # Moved this from the daemon requirements for consistency with datadog.
-  sudo apt-get update -y
-  sudo apt-get install python-pip -y --force-yes
+  #sudo apt-get update -y
+  #sudo apt-get install python-pip -y --force-yes
   pip install -r "$SOURCE_DIR/requirements.txt"
 
   enable_spinnaker_monitoring_config

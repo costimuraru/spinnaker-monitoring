@@ -25,9 +25,16 @@ buildscript {
   }
 }
 
+plugins {
+
+  // RPM
+  id 'nebula.ospackage' version '4.4.0'
+
+}
+
 allprojects {
   group = "com.netflix.spinnaker.monitoring"
-  apply plugin: 'spinnaker.project'
+  //apply plugin: 'spinnaker.project'
 }
 
 String toVers(String v) {
