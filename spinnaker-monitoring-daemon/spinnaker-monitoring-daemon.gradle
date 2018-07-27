@@ -58,7 +58,7 @@ ospackage() {
   
   from('registry.dev') {
     into('/opt/spinnaker-monitoring/registry')
-    fileMode  0600
+    fileMode  0644
   }  
   
   from(file('etc/init/spinnaker-monitoring.conf')) {
