@@ -14,4 +14,6 @@ Restart=on-failure
 WantedBy=multi-user.target
 EOF
 
+systemctl daemon-reload
+
 sh /opt/spinnaker-monitoring/third_party/prometheus/install.sh --client_only
