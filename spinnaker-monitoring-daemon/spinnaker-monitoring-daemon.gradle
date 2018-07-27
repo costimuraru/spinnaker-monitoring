@@ -69,6 +69,11 @@ ospackage() {
   }
 }
 
+buildRpm {
+
+  postInstall = file('pkg_scripts/postInstallRpm.sh')
+}
+
 task test(type: Exec) {
   workingDir "$projectDir"
   commandLine './tests/run_tests.sh'
