@@ -13,3 +13,5 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
+
+sh /opt/spinnaker-monitoring/third_party/prometheus/install.sh --client_only
