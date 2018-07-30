@@ -23,7 +23,7 @@ ospackage() {
   // common installation paths 
   def spinnakerMonitoringHome = "/opt/spinnaker-monitoring"
   
-  version = "0.8.1" //toVers(project.version.toString())
+  version = "0.8.2" //toVers(project.version.toString())
   release "master"
   os "LINUX"
   archStr "noarch"
@@ -72,6 +72,7 @@ ospackage() {
 buildRpm {
 
   postInstall = file('pkg_scripts/postInstallRpm.sh')
+  requires('spinnaker-monitoring-third-party')
 }
 
 task test(type: Exec) {

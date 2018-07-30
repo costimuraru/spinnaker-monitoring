@@ -18,7 +18,7 @@ apply plugin: 'nebula.ospackage'
 
 ospackage() {
   packageName = project.name
-  version = "0.8.1" //toVers(project.version.toString())
+  version = "0.8.2" //toVers(project.version.toString())
   release "master"
   os "LINUX"
   archStr "noarch"
