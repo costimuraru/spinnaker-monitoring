@@ -8,7 +8,7 @@ registry_dir:
 
 server:
   # This host and port to bind the embedded HTTP server on.
-  host: localhost
+  host: 0.0.0.0
   port: 8008
 
 
