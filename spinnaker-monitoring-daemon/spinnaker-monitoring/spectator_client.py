@@ -244,7 +244,7 @@ class SpectatorClient(object):
     authorization = None
     if info.username or info.password:
       authorization = base64.encodestring(
-          '%s:%s' % (info.username, info.password)).replace('\n', '')
+          '%s:%s' % (urllib2.unquote(info.username), urllib2.unquote(info.password))).replace('\n', '')
 
     query = '?' + info.query if info.query else ''
     sep = '&' if info.query else '?'
